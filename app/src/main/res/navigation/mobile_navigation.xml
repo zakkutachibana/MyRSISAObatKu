@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_my_medicine">
+
+    <fragment
+        android:id="@+id/navigation_my_medicine"
+        android:name="com.zak.rsisaobatku.ui.mymedicine.MyMedicineFragment"
+        android:label="@string/title_my_medicine"
+        tools:layout="@layout/fragment_my_medicine" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.zak.rsisaobatku.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" />
+</navigation>

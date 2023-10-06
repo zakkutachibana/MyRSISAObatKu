@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/colorOnBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".ui.addupdate.AddUpdateActivity">
+
+        <TextView
+            android:id="@+id/title_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/geomatrix_heavy"
+            android:text="Detail Obat"
+            android:textAlignment="center"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="36sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_medicine_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_add"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_med_name"
+            app:startIconTint="@color/icon_color_selector">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_medicine_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Obat"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_medication"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_medicine_name"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:passwordToggleTint="@color/icon_color_selector"
+            app:startIconDrawable="@drawable/ic_medication"
+            app:startIconTint="@color/icon_color_selector">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_medication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pengobatan"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_type"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_medication"
+            android:layout_alignParentStart="true"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:passwordToggleTint="@color/icon_color_selector"
+            app:startIconDrawable="@drawable/ic_med_type"
+            app:startIconTint="@color/icon_color_selector">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/act_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipe Obat"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/spacer"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_medication"
+            android:layout_alignBottom="@+id/layout_type"
+            android:layout_toEndOf="@+id/layout_type" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_dosage"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_medication"
+            android:layout_toEndOf="@+id/spacer"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:passwordToggleTint="@color/icon_color_selector"
+            app:startIconDrawable="@drawable/ic_dosage"
+            app:startIconTint="@color/icon_color_selector">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_dosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dosis"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_instruction"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_type"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:passwordToggleTint="@color/icon_color_selector"
+            app:startIconDrawable="@drawable/ic_instruction"
+            app:startIconTint="@color/icon_color_selector">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/act_instruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Instruksi"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_frequency"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_instruction"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:passwordToggleTint="@color/icon_color_selector"
+            app:startIconDrawable="@drawable/ic_frequency"
+            app:startIconTint="@color/icon_color_selector">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/act_frequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Frekuensi"
+                android:inputType="none"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/line_start"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layout_frequency"
+            android:alpha="0.2"
+            android:background="?attr/colorOnSurface"
+            android:visibility="gone"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_remind_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_start"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="40dp"
+            android:elevation="4dp"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/title_reminder_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Pengingat 1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_morning_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="00:00"
+                    android:textSize="40sp"
+                    app:layout_constraintStart_toStartOf="@+id/title_reminder_one"
+                    app:layout_constraintTop_toBottomOf="@+id/title_reminder_one" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_morning"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_morning"
+                    android:padding="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/il_morning"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_remind_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_remind_one"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="50dp"
+            android:elevation="4dp"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/title_reminder_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Pengingat 2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_noon_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="00:00"
+                    android:textSize="40sp"
+                    app:layout_constraintStart_toStartOf="@+id/title_reminder_two"
+                    app:layout_constraintTop_toBottomOf="@+id/title_reminder_two" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_noon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/bg_noon"
+                    android:src="@drawable/il_noon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_remind_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_remind_two"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="50dp"
+            android:elevation="4dp"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/title_reminder_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Pengingat 3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_night_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="00:00"
+                    android:textSize="40sp"
+                    app:layout_constraintStart_toStartOf="@+id/title_reminder_three"
+                    app:layout_constraintTop_toBottomOf="@+id/title_reminder_three" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_night"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/bg_night"
+                    android:src="@drawable/il_night"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/line_end"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/card_remind_three"
+            android:layout_marginTop="16dp"
+            android:alpha="0.2"
+            android:background="?attr/colorOnSurface"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_end"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button_gradient"
+            android:padding="15dp"
+            android:text="Tambahkan Obat"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_my_medicine"
+        android:icon="@drawable/ic_med"
+        android:title="@string/title_my_medicine" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_news"
+        android:icon="@drawable/ic_news"
+        android:title="@string/title_news" />
+
+</menu>

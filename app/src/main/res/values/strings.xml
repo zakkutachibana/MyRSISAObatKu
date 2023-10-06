@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">RSISAObatKu</string>
+    <string name="title_my_medicine">ObatKu</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_news">Berita</string>
+
+    <string name="title">Judul</string>
+    <string name="description">Deskripsi</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Hapus</string>
+    <string name="date">Tanggal</string>
+    <string name="message_undo">Batalkan menghapus item sebelumnya?</string>
+    <string name="message_ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="empty">Kolom tidak boleh kosong!</string>
+    <string name="update">Update</string>
+    <string name="change">Ubah Detail Obat</string>
+    <string name="add">Tambah Obat</string>
+    <string name="save">Simpan</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="message_cancel">Apakah anda ingin membatalkan perubahan pada form?</string>
+    <string name="message_delete">Apakah anda yakin ingin menghapus item ini?</string>
+    <string name="added">Satu item berhasil ditambahkan</string>
+    <string name="changed">Obat berhasil diubah</string>
+    <string name="deleted">Obat berhasil dihapus</string>
+    <string name="add_date">ditambahkan pada: %1$s</string>
+    <string name="medication_description">Untuk mengobati %1$s, dengan dosis %2$s %3$s</string>
+
+    <string-array name="listType">
+        <item>Tablet</item>
+        <item>Kapsul</item>
+        <item>Kaplet</item>
+        <item>Pil</item>
+        <item>Serbuk/puyer</item>
+        <item>Obat oles</item>
+        <item>Obat tetes</item>
+        <item>Sirup</item>
+    </string-array>
+
+    <string-array name="listInstruct">
+        <item>Sebelum makan</item>
+        <item>Sesudah makan</item>
+        <item>Saat makan</item>
+        <item>Bebas</item>
+
+    </string-array>
+    <string-array name="listFreq">
+        <item>1x sehari</item>
+        <item>2x sehari</item>
+        <item>3x sehari</item>
+    </string-array>
+</resources>
